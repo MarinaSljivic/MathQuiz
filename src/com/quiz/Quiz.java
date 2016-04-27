@@ -106,14 +106,75 @@ public class Quiz {
 		}
 	}
 
-	private static void multiplicationQuiz(int num1, int num2) {
-		// TODO Auto-generated method stub
-
+	/**
+	 * Creates a multiplication question num1-num2, prints it to the user<br/>
+	 * and checks if the answer is right.<br/>
+	 * @param num1
+	 * @param num2
+	 */
+	private static void multiplicationQuiz( int num1, int num2 )
+	{
+		System.out.println( num1 + " * " + num2 + " = " ) ;
+		try
+		{
+			int rez = scan.nextInt() ;
+			if ( rez == num1 * num2 )
+			{
+				System.out.println( "Excellent!" ) ;
+			}
+			else
+			{
+				System.out.println( "Wrong answer." ) ;
+			}
+		}
+		catch ( InputMismatchException e )
+		{
+			System.out.println( "Invalid input." ) ;
+		}
+		catch ( ArithmeticException e )
+		{
+			System.out.println( "integer overflow" ) ;
+		}
+		finally
+		{
+			scan.nextLine() ;
+		};
 	}
 
-	private static void divideQuiz(int num1, int num2) {
-		// TODO Auto-generated method stub
-
+	
+	/**
+	 * Creates a division question num1-num2, prints it to the user<br/>
+	 * and checks if the answer is right.<br/>
+	 * @param num1
+	 * @param num2
+	 */
+	private static void divideQuiz( int num1, int num2 )
+	{
+		System.out.println( num1 + " / " + num2 + " = " ) ;
+		try
+		{
+			int rez = scan.nextInt() ;
+			if ( rez == num1 / num2 )
+			{
+				System.out.println( "Excellent!" ) ;
+			}
+			else
+			{
+				System.out.println( "Wrong answer." ) ;
+			}
+		}
+		catch ( InputMismatchException e )
+		{
+			System.out.println( "Invalid input." ) ;
+		}
+		catch ( ArithmeticException e )
+		{
+			System.out.println( "Can't be divided by Zero" ) ;
+		}
+		finally
+		{
+			scan.nextLine() ;
+		};
 	}
 
 	private static void squareQuiz(int num1) {
